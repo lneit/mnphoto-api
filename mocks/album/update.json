@@ -1,0 +1,11 @@
+{
+    "body": "{\"title\":\"Sydney Icons\",\"description\":\"Sydney Icons\"}",
+    "pathParameters": {
+      "id": "c37d0230-950b-11ea-a722-513f723a95c8"
+    },
+    "requestContext": {
+      "identity": {
+        "cognitoIdentityId": "test-user"
+      }
+    }
+  }

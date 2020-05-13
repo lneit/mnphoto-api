@@ -1,0 +1,8 @@
+{
+    "body": "{\"title\":\"Sydney Icons\",\"description\":\"Sydney Icons\"}",
+    "requestContext": {
+        "identity": {
+        "cognitoIdentityId": "test-user"
+        }
+    }
+}
