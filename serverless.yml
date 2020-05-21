@@ -25,6 +25,7 @@ provider:
   # These environment variables are made available to our functions
   # under process.env.
   environment:
+    category: ${env:CATEGORY}
     albumsTableName: ${env:ALBUMS_TABLE_NAME}
 
   # 'iamRoleStatements' defines the permission policy for the Lambda function.
@@ -55,6 +56,10 @@ functions:
       - http:
           path: albums
           method: post
+          request:
+            parameters:
+              querystrings:
+                category: true
           cors: true
           authorizer: aws_iam
   get-album:
@@ -88,6 +93,10 @@ functions:
       - http:
           path: albums/{id}
           method: put
+          request:
+            parameters:
+              querystrings:
+                foo: true
           cors: true
           authorizer: aws_iam
   delete-album:

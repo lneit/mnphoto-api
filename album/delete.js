@@ -5,10 +5,10 @@ export const main = handler(async (event, context) => {
   const params = {
     TableName: process.env.albumsTableName,
     // 'Key' defines the partition key and sort key of the item to be removed
-    // - 'userId': Identity Pool identity id of the authenticated user
+    // - 'category': album category, partitioning key
     // - 'albumId': path parameter
     Key: {
-      userId: event.requestContext.identity.cognitoIdentityId,
+      category: process.env.category,
       albumId: event.pathParameters.id
     }
   };
