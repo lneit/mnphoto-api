@@ -1,0 +1,17 @@
+Resources:
+    AlbumsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.albumsTableName}
+        AttributeDefinitions:
+          - AttributeName: category
+            AttributeType: S
+          - AttributeName: albumId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: category
+            KeyType: HASH
+          - AttributeName: albumId
+            KeyType: RANGE
+        # Set the capacity to auto-scale
+        BillingMode: PAY_PER_REQUEST
