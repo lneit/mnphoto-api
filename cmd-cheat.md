@@ -26,8 +26,8 @@ serverless invoke local --function delete-album --path mocks/album/delete.json
 
 ```
 npx aws-api-gateway-cli-test \
---username='luda-dev@mnphoto.com' \
---password='Passw0rd!' \
+--username='<USER_NAME>' \
+--password='<PASSWORD>' \
 --user-pool-id='us-west-2_JdmZBtBRE' \
 --app-client-id='4ih8qhev705kqqm27c95r69hou' \
 --cognito-region='us-west-2' \
