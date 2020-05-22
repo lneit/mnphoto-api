@@ -28,12 +28,12 @@ serverless invoke local --function delete-album --path mocks/album/delete.json
 npx aws-api-gateway-cli-test \
 --username='<USER_NAME>' \
 --password='<PASSWORD>' \
---user-pool-id='us-west-2_JdmZBtBRE' \
---app-client-id='4ih8qhev705kqqm27c95r69hou' \
---cognito-region='us-west-2' \
---identity-pool-id='us-west-2:558b9429-1bf6-4648-896e-087a7c66ffe1' \
---invoke-url='https://4ourrdry69.execute-api.us-west-2.amazonaws.com/prod' \
---api-gateway-region='us-west-2' \
+--user-pool-id='<USER_POOL_ID>' \
+--app-client-id='<APP_CLIENT_ID>' \
+--cognito-region='<COGNITO_REGION>' \
+--identity-pool-id='<IDENTITY_POOL_ID>' \
+--invoke-url='<API_INVOKE_URL>' \
+--api-gateway-region='<API_GW_REGION>' \
 --path-template='/albums' \
 --method='POST' \
 --body='{"title":"Promised Land","description":"Promised Land"}'
